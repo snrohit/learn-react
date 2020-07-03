@@ -33,6 +33,13 @@ class  Main extends Component {
             promotion={this.state.promotions.filter((promo)=>promo.featured===true)[0]}
           ></Home> );
       }
+
+      const DishWithId = ({match}) => {
+        return(
+            <Dishdetail dish={this.state.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
+              comments={this.state.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))} />
+        );
+      };
        
     
     return (
@@ -42,6 +49,7 @@ class  Main extends Component {
          <Route path='/home' component={Homepage}  />
          <Route exact path ='/menu' component={()=> <Menu dishes={this.state.dishes}></Menu>}></Route>
          <Route exact path='/contactus' component={Contact}/>
+         <Route path='/menu/:dishId' component={DishWithId} />
          <Redirect to='/home'></Redirect>
        </Switch>
   
