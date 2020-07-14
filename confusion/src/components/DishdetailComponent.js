@@ -17,8 +17,8 @@ import {
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
 import { Link } from "react-router-dom";
-/* import { Loading } from "./LoadingComponent";
-import { baseUrl } from "../shared/baseUrl"; */
+import { Loading } from "./LoadingComponent";
+/*import { baseUrl } from "../shared/baseUrl"; */
 import { FadeTransform, Fade, Stagger } from "react-animation-components"; 
 
 const required = val => val && val.length;
@@ -185,7 +185,7 @@ function RenderComments({ comments, addComment, dishId }) {
 }
 
 const DishDetailComponent = props => {
- /*  if (props.isLoading) {
+ if (props.isLoading) {
     return (
       <div className="container">
         <div className="row">
@@ -200,9 +200,8 @@ const DishDetailComponent = props => {
           <h4>{props.errMess}</h4>
         </div>
       </div>
-    ); */
-  // } else 
-  if (props.dish != null)
+    ); 
+ } else   if (props.dish != null)
     return (
       <div className="container">
         <div className="row">
