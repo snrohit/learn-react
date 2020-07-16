@@ -21,7 +21,6 @@ import { Loading } from "./LoadingComponent";
 /*import { baseUrl } from "../shared/baseUrl"; */
 import { FadeTransform, Fade, Stagger } from "react-animation-components"; 
 import { baseUrl } from '../shared/baseUrl';
-
 const required = val => val && val.length;
 const maxLength = len => val => !val || val.length <= len;
 const minLength = len => val => val && val.length >= len;
